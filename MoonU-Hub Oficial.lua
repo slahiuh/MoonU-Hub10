@@ -156,9 +156,8 @@ local Tab6 = Window:MakeTab({"RGB", "brush"})
 local Tab7 = Window:MakeTab({"Music All", "radio"})    
 local Tab8 = Window:MakeTab({"Music", "music"}) 
 local Tab9 = Window:MakeTab({"Troll", "skull"}) 
-local Tab10 = Window:MakeTab({"Lag Server", "bomb"})
-local Tab11 = Window:MakeTab({"Scripts", "scroll"})
-local Tab12 = Window:MakeTab({"Teleportes", "map-pin"})
+local Tab10 = Window:MakeTab({"Scripts", "scroll"})
+local Tab11 = Window:MakeTab({"Teleportes", "map-pin"})
 
 
 
@@ -4701,8 +4700,71 @@ Tab9:AddButton({"Parar Tudo", function()
     soccerBall = nil
     originalProperties = nil
     showNotification("Tudo Parado", "Todas as funções foram desativadas.", nil)
+        end})
+            ps.Texture = "rbxassetid://243660364"
+            ps.Color = ColorSequence.new(Color3.fromRGB(0, 153, 255))
+            ps.LightEmission = 1
+            ps.Size = NumberSequence.new(3)
 end})
 
+-- Adiciona a seção no seu Tab
+local JujutsuSection = Tab9:AddSection({ "Jujutsu Kaisen - Wx and Shelby" })
+
+-- Adiciona o botão na seção
+JujutsuSection:AddButton({
+    Name = "[🌌🚀] Expansão de Domínio (by e0davizinTA, credits Wx)",
+    Description = "Isso é muito OP, e causa glitches no cliente dos jogadores!",
+    Callback = function()
+        -- Serviços
+        local TextChatService = game:GetService("TextChatService")
+        local Players = game:GetService("Players")
+        local Player = Players.LocalPlayer
+
+        -- Aviso no chat
+        if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then 
+            TextChatService.TextChannels.RBXGeneral:SendAsync(
+                "hi\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r[🌌🚀] Expansão de Domínio..."
+    )"
+            )
+        else 
+            print("gojo chorou no banho F")
+        end
+
+        -- Função para ativar Expansão de Domínio
+        local function ativarDominio()
+            local char = Player.Character or Player.CharacterAdded:Wait()
+            local hrp = char:WaitForChild("HumanoidRootPart")
+
+            local dominio = Instance.new("Model", workspace)
+            dominio.Name = "InfiniteVoid"
+
+            local esfera = Instance.new("Part")
+            esfera.Shape = Enum.PartType.Ball
+            esfera.Size = Vector3.new(300, 300, 300)
+            esfera.Position = hrp.Position
+            esfera.Anchored = true
+            esfera.CanCollide = false
+            esfera.Material = Enum.Material.ForceField
+            esfera.Transparency = 0.3
+            esfera.Color = Color3.fromRGB(0, 0, 0)
+            esfera.Parent = dominio
+
+            local luz = Instance.new("PointLight", esfera)
+            luz.Color = Color3.fromRGB(0, 153, 255)
+            luz.Brightness = 10
+            luz.Range = 300
+
+            local ps = Instance.new("ParticleEmitter", esfera)
+            ps.Texture = "rbxassetid://243660364"
+            ps.Color = ColorSequence.new(Color3.fromRGB(0, 153, 255))
+            ps.LightEmission = 1
+            ps.Size = NumberSequence.new(3)
+        end
+
+        -- Ativa a expansão
+        ativarDominio()
+    end
+})
 
 
 
@@ -4719,7 +4781,7 @@ end})
                                                -- === Tab 11: Scripts === --
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
-Tab11:AddButton({
+Tab10:AddButton({
     Name = "FE Jerk Off Hub Matrix",
     Description = "Universal",
     Callback = function()
@@ -4727,7 +4789,7 @@ Tab11:AddButton({
     end
 })
 
-Tab11:AddButton({
+Tab10:AddButton({
     Name = "FE HUGG",
     Description = "Universal",
     Callback = function()
@@ -4737,7 +4799,7 @@ Tab11:AddButton({
 
 
 
-Tab11:AddButton({
+Tab10:AddButton({
     Name = "Buraco Negro",
     Description = "Universal",
     Callback = function()
@@ -4747,23 +4809,23 @@ Tab11:AddButton({
 
 local Section = Tab11:AddSection({"esse system broochk e voidProtection"})
 
-Tab11:AddButton({
-    Name = "System Broochk",
+Tab10:AddButton({
+    Name = "System Brook",
     Description = "Universal",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/script"))()
     end
 })
 
-Tab11:AddButton({
-    Name = "Roships",
+Tab10:AddButton({
+    Name = "Rochips",
     Description = "Universal",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-rochips-universal-18294"))()
     end
 })
 
-Tab11:AddButton({
+Tab10:AddButton({
     Name = "Sander X",
     Description = "Somente para Brookhaven",
     Callback = function()
@@ -4771,7 +4833,7 @@ Tab11:AddButton({
     end
 })
 
-Tab11:AddButton({
+Tab10:AddButton({
     Name = "Reverso",
     Description = "Universal",
     Callback = function()
@@ -4779,7 +4841,7 @@ Tab11:AddButton({
     end
 })
 
-Tab11:AddButton({
+Tab10:AddButton({
     Name = "RD4",
     Description = "Somente para Brookhaven",
     Callback = function()
